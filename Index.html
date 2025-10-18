@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RedFlame Culinary Academy</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+    body {background:#fff; color:#333; scroll-behavior:smooth;}
+    header {
+      background:#d32f2f; color:#fff; padding:15px 25px;
+      display:flex; justify-content:space-between; align-items:center;
+      position:sticky; top:0; z-index:999;
+    }
+    header h1 {font-size:1.4rem;}
+    nav a {
+      color:#fff; text-decoration:none; margin-left:18px; font-weight:500;
+      transition:0.3s;
+    }
+    nav a:hover {color:#ffebee;}
+
+    section {padding:60px 20px; max-width:1100px; margin:auto;}
+    .hero {
+      background:url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color:#fff; text-align:center; padding:120px 20px;
+    }
+    .hero h2 {font-size:2.6rem; text-shadow:2px 2px 6px #000;}
+    .hero p {margin-top:10px; font-size:1.2rem;}
+    .btn {
+      display:inline-block; margin-top:25px; background:#fff; color:#d32f2f;
+      padding:12px 28px; border-radius:25px; text-decoration:none; font-weight:600;
+      transition:0.3s;
+    }
+    .btn:hover {background:#d32f2f; color:#fff; border:1px solid #fff;}
+
+    .about, .courses, .gallery, .contact {text-align:center;}
+    .about p {max-width:850px; margin:auto; line-height:1.6;}
+
+    .courses .container {display:flex; flex-wrap:wrap; justify-content:center;}
+    .courses .card {
+      background:#f8f8f8; border-radius:10px; padding:0; margin:15px;
+      flex:1; min-width:280px; max-width:320px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      overflow:hidden; animation:fadeIn 1s ease forwards;
+    }
+    .courses .card img {
+      width:100%; height:180px; object-fit:cover;
+    }
+    .courses .card h3 {margin:15px 0 10px; color:#d32f2f;}
+    .courses .card p {padding:0 15px 20px;}
+
+    .gallery img {
+      width:300px; height:210px; object-fit:cover;
+      border-radius:10px; margin:10px; transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform:scale(1.05);
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    form {max-width:500px; margin:auto; text-align:left;}
+    input, textarea {
+      width:100%; padding:10px; margin-top:10px;
+      border:1px solid #ccc; border-radius:5px;
+    }
+    button {
+      background:#d32f2f; color:#fff; border:none; padding:10px 20px;
+      border-radius:5px; cursor:pointer; margin-top:10px;
+    }
+    button:hover {background:#b71c1c;}
+
+    footer {
+      background:#111; color:#fff; text-align:center; padding:20px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+
+    @media(max-width:768px){
+      header {flex-direction:column;}
+      nav {margin-top:10px;}
+      .hero h2 {font-size:2rem;}
+      .courses .container {flex-direction:column; align-items:center;}
+      .gallery img {width:90%;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍳 RedFlame Academy</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Master the Art of Cooking</h2>
+    <p>Join RedFlame Culinary Academy — where passion meets excellence.</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2><br>
+    <p>At RedFlame Culinary Academy, we ignite creativity and precision in every aspiring chef.
+      Our state-of-the-art kitchens, skilled instructors, and global recipes help students 
+      transform their passion into professional mastery.</p>
+  </section>
+
+  <section id="courses" class="courses">
+    <h2>Our Popular Courses</h2><br>
+    <div class="container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601050690597-1c3a3c139a06?auto=format&fit=crop&w=900&q=80" alt="culinary arts">
+        <h3>Professional Culinary Arts</h3>
+        <p>Learn techniques from knife skills to global cuisines with our world-class instructors.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80" alt="pastry baking">
+        <h3>Pastry & Baking</h3>
+        <p>Master cakes, desserts, breads, and pastries from classic to modern trends.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1533777419517-3e4017b7e6c4?auto=format&fit=crop&w=900&q=80" alt="food management">
+        <h3>Food & Beverage Management</h3>
+        <p>Combine creativity and business to manage restaurants and culinary events successfully.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2><br>
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="food1">
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="food2">
+    <img src="https://images.unsplash.com/photo-1516685304081-de7947d419d4?auto=format&fit=crop&w=600&q=80" alt="food3">
+    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="food4">
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2><br>
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Your name" required>
+      <label>Email</label>
+      <input type="email" placeholder="Your email" required>
+      <label>Message</label>
+      <textarea rows="4" placeholder="Your message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 RedFlame Culinary Academy | Developed by Quick Red Tech</p>
+  </footer>
+
+</body>
+</html>
